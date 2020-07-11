@@ -15,10 +15,7 @@ import { onMount } from 'svelte';
     }
   });
 </script>
-<svelte:head>
-	<title>Sapper project template</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</svelte:head>
+
 <div class="flex flex-row bg-gray-500 justify-end">
 <div class="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 w-10/12 bg-red-500">
 <Product></Product>
