@@ -23,6 +23,6 @@ collections:
     folder: "static/_categorias"
     slug: "{{slug}}"
     fields:
-      - {label: "Layout" name: "layout", widget: "hidden", default: "categoria"}
-      - {label: "Nombre" name: "nombre", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "categoria"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
 
