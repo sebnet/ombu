@@ -22,6 +22,7 @@ collections:
     label: "Categoría"
     folder: "static/_categorias"
     slug: "{{slug}}"
+    create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "categoria"}
       - {label: "Nombre", name: "nombre", widget: "string"}
