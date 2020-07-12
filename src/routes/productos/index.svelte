@@ -9,9 +9,9 @@ export function preload({params,query}){
 </script>
 
 <script>
- let [nombre,descripcion] = prods;
+ let [nombre,description] = prods;
 
 </script>
 
 <div>{nombre}</div>
-<div>{descripcion}</div>
+<div>{description}</div>
