@@ -7,24 +7,21 @@ public_folder: /uploads # The src attribute for uploaded media will begin with /
 
 
 collections:
-  - name: "productos" # Used in routes, e.g., /admin/collections/blog
-    label: "Productos" # Used in the UI
-    label_singular: "Producto"
-    description: "Colección de productos publicados"
-    folder: "static/_productos" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Nombre", name: "title", widget: "string"}
-      - {label: "Descripcion Corta", name: "description", widget: "string"}
-      - {label: "Cuerpo", name: "cuerpo", widget: "markdown"}
-      - {label: "Categoria", widget: "relation", name: "productoCategoria", collection: "categoria", valueField: "nombre", displayFields: ["nombre", "descripcion"], searchFields: ["nombre", "descripcion", "cuerpo"]}
-  - name: "categoria"
-    label: "Categoría"
-    folder: "static/_categorias"
-    slug: "{{slug}}"
+  - label: "Blog in English"
+    name: "english_posts"
+    folder: "_posts"
     create: true
+    filter: {field: "language", value: "en"}
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "categoria"}
-      - {label: "Nombre", name: "nombre", widget: "string"}
-
+      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+  - label: "Blog en Español"
+    name: "spanish_posts"
+    folder: "_posts"
+    create: true
+    filter: {field: "language", value: "es"}
+    fields:
+      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
