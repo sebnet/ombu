@@ -12,7 +12,7 @@ collections:
     label_singular: "Producto"
     extension: "json"
     description: "Colección de productos publicados"
-    folder: "static/productos" # The path to the folder where the documents are stored
+    folder: "static /productos" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
