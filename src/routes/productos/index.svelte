@@ -9,7 +9,7 @@ export function preload({params,query}){
 </script>
 
 <script>
- let [nombre,description] = prods;
+ let [title,description] = prods;
 
 </script>
 
