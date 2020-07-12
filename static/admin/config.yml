@@ -22,10 +22,10 @@ collections:
       - {label: "Categoria", widget: "relation", name: "productoCategoria", collection: "categoria", valueField: "nombre", displayFields: ["nombre", "descripcion"], searchFields: ["nombre", "descripcion", "cuerpo"]}
   - name: "categoria"
     label: "Categoría"
-    folder: "static/_categorias"
+    folder: "static/categorias"
     slug: "{{slug}}"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "categoria"}
+      - {label: "Layout", name: "title", widget: "hidden", default: "categoria"}
       - {label: "Nombre", name: "nombre", widget: "string"}
 
