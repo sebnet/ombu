@@ -3,8 +3,10 @@ import path from 'path';
 const pathToProds = 'static/productos';
 const getAllProds = () => {
   try {
-    fs.readdirSync(pathToProds).map((filename) => {
-      const prod = fs.readFileSync(path.resolve(pathToProds), 'utf-8');
+    return fs.readdirSync(pathToProds).map((filename) => {
+      return JSON.parse(
+        fs.readFileSync(path.resolve(pathToProds, filename), 'utf8'),
+      );
     });
   } catch (e) {
     return [];
